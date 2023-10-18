@@ -1,1 +1,4 @@
-<textarea class="temporary-respond" id="temporary-respond" style="width:100%;min-height:250px"></textarea>
+{{#if this.session.showSignupCta}}
+<textarea class="temporary-respond" id="temporary-respond" style="width:65%;min-height:250px"></textarea>
+<SignupCta />
+{{/if}}
