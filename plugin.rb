@@ -10,7 +10,7 @@
 enabled_site_setting :plugin_name_enabled
 
 module ::MyPluginModule
-  PLUGIN_NAME = "discourse-plugin-name"
+  PLUGIN_NAME = "discourse-plugin-bm"
 end
 
 require_relative "lib/my_plugin_module/engine"
