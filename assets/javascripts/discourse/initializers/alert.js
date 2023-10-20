@@ -2,6 +2,9 @@ export default {
   name: 'alert',
   initialize() {
     console.log('alert boxes are annoying!');
-    $('#temporary-respond').text('fooo bar');
+    $(document).ready(function(){
+    	$('#temporary-respond').text('fooo bar');
+    });
+   
   }
 };
