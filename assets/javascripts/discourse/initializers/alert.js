@@ -1,7 +1,8 @@
 export default {
   name: 'alert',
   initialize() {
-    console.log('alert boxes are annoying!');
+      monitorEvents(window);
+
     $(document).ready(function(){
     	if($('#topic-footer-buttons').find('button').hasClass('create')) {
     		$('.pre-connected').hide();
@@ -17,7 +18,7 @@ export default {
       $('#temporary-respond').text('fooo bar');
     });
 
-    $( document ).on( "ajaxComplete", function() {
+    $( document ).on( "load", function() {
       $( ".log" ).text( "Triggered ajaxComplete handler." );
       if($('#topic-footer-buttons').find('button').hasClass('create')) {
         $('.pre-connected').hide();
@@ -25,6 +26,10 @@ export default {
 
       $('#temporary-respond').text('fooo bar');
     } );
-   
+    
+    $('#reponse-rapide').on('click', function(){
+      $('button.pull-right').trigger('click');
+
+    });
   }
 };
