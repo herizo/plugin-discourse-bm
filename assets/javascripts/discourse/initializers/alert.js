@@ -34,7 +34,7 @@ export default {
     
 
     function loadTemporaryText() {
-      $('#ember65').text($.cookie('temporary-respond'));
+      $('.d-editor-input').text($.cookie('temporary-respond'));
     }
 
 
