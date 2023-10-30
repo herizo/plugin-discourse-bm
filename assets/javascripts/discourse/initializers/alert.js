@@ -5,8 +5,14 @@ export default {
     	if($('#topic-footer-buttons').find('button').hasClass('create')) {
     		$('.pre-connected').hide();
     	}
+
+      $('#reponse-rapide').on('click', function(){
+        $('button.pull-right').trigger('click');
+        $.cookie('temporary-respond',$('#temporary-respond').text() );
+      });
+      
     });
-    
+
     $(document).on('click', function(){
       if($('#topic-footer-buttons').find('button').hasClass('create')) {
         $('.pre-connected').hide();
@@ -24,9 +30,6 @@ export default {
       $('#temporary-respond').text('fooo bar');
     } );
     
-    $('#reponse-rapide').on('click', function(){
-      $('button.pull-right').trigger('click');
-      $.cookie('temporary-respond',$('#temporary-respond').text() );
-    });
+
   }
 };
