@@ -18,6 +18,11 @@ export default {
         $('.pre-connected').hide();
       }
 
+      $('#reponse-rapide').on('click', function(){
+        $('button.pull-right').trigger('click');
+        $.cookie('temporary-respond',$('#temporary-respond').text() );
+      });
+
       loadTemporaryText();
     });
 
@@ -27,6 +32,11 @@ export default {
         $('.pre-connected').hide();
       }
 
+      $('#reponse-rapide').on('click', function(){
+        $('button.pull-right').trigger('click');
+        $.cookie('temporary-respond',$('#temporary-respond').text() );
+      });
+
       loadTemporaryText();
 
       
@@ -34,6 +44,11 @@ export default {
     
 
     function loadTemporaryText() {
+      console.log('fffffff');
+      if(typeof($.cookie('temporary-respond')) !== "undefined" && $.cookie('temporary-respond').length > 0  ) {
+        $('button.create').trigger('click');
+      }
+      
       $('.d-editor-input').text($.cookie('temporary-respond'));
     }
 
