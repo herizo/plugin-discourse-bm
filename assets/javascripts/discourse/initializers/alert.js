@@ -10,7 +10,7 @@ export default {
         $('button.pull-right').trigger('click');
         $.cookie('temporary-respond',$('#temporary-respond').text() );
       });
-      
+
     });
 
     $(document).on('click', function(){
@@ -18,7 +18,7 @@ export default {
         $('.pre-connected').hide();
       }
 
-      $('#temporary-respond').text('fooo bar');
+      loadTemporaryText();
     });
 
     $( document ).on( "load", function() {
@@ -27,9 +27,16 @@ export default {
         $('.pre-connected').hide();
       }
 
-      $('#temporary-respond').text('fooo bar');
+      loadTemporaryText();
+
+      
     } );
     
+
+    function loadTemporaryText() {
+      $('#ember65').text($.cookie('temporary-respond'));
+    }
+
 
   }
 };
