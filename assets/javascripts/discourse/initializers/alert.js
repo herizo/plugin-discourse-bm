@@ -9,6 +9,13 @@ export default {
 
     	$('#temporary-respond').text('fooo bar');
     });
+    $(document).on('click', function(){
+      if($('#topic-footer-buttons').find('button').hasClass('create')) {
+        $('.pre-connected').hide();
+      }
+
+      $('#temporary-respond').text('fooo bar');
+    });
    
   }
 };
