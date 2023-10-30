@@ -1,13 +1,12 @@
 export default {
   name: 'alert',
   initialize() {
-      monitorEvents(window);
-
     $(document).ready(function(){
     	if($('#topic-footer-buttons').find('button').hasClass('create')) {
     		$('.pre-connected').hide();
     	}
     });
+    
     $(document).on('click', function(){
       if($('#topic-footer-buttons').find('button').hasClass('create')) {
         $('.pre-connected').hide();
