@@ -7,8 +7,6 @@ export default {
     	if($('#topic-footer-buttons').find('button').hasClass('create')) {
     		$('.pre-connected').hide();
     	}
-
-    	$('#temporary-respond').text('fooo bar');
     });
     $(document).on('click', function(){
       if($('#topic-footer-buttons').find('button').hasClass('create')) {
@@ -29,7 +27,7 @@ export default {
     
     $('#reponse-rapide').on('click', function(){
       $('button.pull-right').trigger('click');
-
+      $.cookie('temporary-respond',$('#temporary-respond').text() );
     });
   }
 };
