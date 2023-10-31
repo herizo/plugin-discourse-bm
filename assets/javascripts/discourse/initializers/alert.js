@@ -13,7 +13,7 @@ export default {
       });
 
       if(typeof($.cookie('temporary-respond')) !== "undefined" && $.cookie('temporary-respond').length > 0  ) {
-        $('button.create').trigger('click');
+       
         $('.d-editor-input').val($.cookie('temporary-respond'));
       }
       
