@@ -5,21 +5,21 @@ export default {
   name: 'alert',
   initialize() {
 
-    DiscourseURL.onChanged((url) => {
+    this.appEvents.on('didTransition', () => {
       // Insérez votre code ici pour réagir au changement de page
-      console.log('La page a changé. Nouvelle URL : ' + url);
+      console.log('La page a changé. Nouvelle URL : ');
       if($('#topic-footer-buttons').find('button').hasClass('create')) {
-            $('.pre-connected').hide();
-        }
+        $('.pre-connected').hide();
+      }
 
-        $('#reponse-rapide').on('click', function(){
-          $('button.pull-right').trigger('click');
-          $.cookie('temporary-respond',$('#temporary-respond').val() );
-        });
+      $('#reponse-rapide').on('click', function(){
+        $('button.pull-right').trigger('click');
+        $.cookie('temporary-respond',$('#temporary-respond').val() );
+      });
 
-        if(typeof($.cookie('temporary-respond')) !== "undefined"  ) {
-          $('.d-editor-input').val($.cookie('temporary-respond'));
-        }   
+      if(typeof($.cookie('temporary-respond')) !== "undefined"  ) {
+        $('.d-editor-input').val($.cookie('temporary-respond'));
+      }   
 
     });
 
@@ -42,7 +42,6 @@ export default {
 
     $(document).on('click', function(){
 
-      
       if($('#topic-footer-buttons').find('button').hasClass('create')) {
         $('.pre-connected').hide();
       }
@@ -53,7 +52,6 @@ export default {
       });
 
       if(typeof($.cookie('temporary-respond')) !== "undefined"  ) {
-        
         $('.d-editor-input').val($.cookie('temporary-respond'));
       }      
       
