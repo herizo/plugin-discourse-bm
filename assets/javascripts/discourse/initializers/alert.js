@@ -1,3 +1,6 @@
+import { on } from 'discourse-common/utils/decorators';
+import { DiscourseURL } from 'discourse/lib/url';
+
 export default {
   name: 'alert',
   initialize() {
@@ -20,7 +23,7 @@ export default {
 
     });
 
-    
+
     $(document).ready(function(){
         if($('#topic-footer-buttons').find('button').hasClass('create')) {
             $('.pre-connected').hide();
