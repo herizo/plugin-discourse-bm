@@ -34,7 +34,7 @@ export default {
       });
 
       if(typeof($.cookie('temporary-respond')) !== "undefined"  ) {
-        $('button.create').trigger('click');
+        
         $('.d-editor-input').val($.cookie('temporary-respond'));
       }      
       
