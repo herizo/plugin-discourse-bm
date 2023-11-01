@@ -1,5 +1,3 @@
-import { on } from 'discourse-common/utils/decorators';
-import { DiscourseURL } from 'discourse/lib/url';
 
 export default {
   name: 'alert',
@@ -35,7 +33,6 @@ export default {
       if(typeof($.cookie('temporary-respond')) !== "undefined"  ) {
         $('.d-editor-input').val($.cookie('temporary-respond'));
       }      
-      
     });
 
   }
